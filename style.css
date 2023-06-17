@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.todolist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    height: 100vh;
+    background-color: lightblue;
+}
+
+.todolist__top{
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.todolist__top form{
+    display: flex;
+    gap: 40px;
+}
+
+.todolist__top form div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todolist__top form input{
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 2px solid teal;
+}
+
+.error{
+    color: red;
+}
+
+.todolist__top form button{
+    padding: 5px 20px;
+    height: 40px;
+    border: none;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+
+.todolist__top form button:hover{
+    outline: 1px solid white;
+}
+
+.todolist__bottom{
+    background-color: lightgray;
+    padding: 20px;
+    width: 600px;
+}
+
+.todolist__bottom .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+
+.todolist__bottom .item button{    
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+}
