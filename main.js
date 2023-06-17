@@ -1,5 +1,6 @@
 
-const tasks=[]
+const tasks=window.localStorage.tasks?window.localStorage.tasks.split(','):[]
+console.log('storage',window.localStorage.tasks.split(','))
 
 const form=document.querySelector('.todolist__top form')
 const target=document.querySelector('.todolist__bottom')
@@ -34,6 +35,7 @@ function addTask(task){
     if(!tasks.includes(task)) {
         tasks.push(task)
         initTasks()
+        saveItems()
     }else handelError('task already exist')
 }
 
@@ -64,5 +66,12 @@ function removeChildrens(){
 
 function removeItem(task){
     tasks.splice(tasks.indexOf(task),1)
+    saveItems()
     initTasks()
 }
+
+function saveItems(){
+    window.localStorage.setItem('tasks',tasks)
+}
+
+initTasks()
